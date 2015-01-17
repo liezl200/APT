@@ -23,5 +23,7 @@ def dailyExercises(request):
 		#if page is out of range (e.g. 9999), deliver last page of results.
 		exercises = paginator.page(paginator.num_pages)
 
+	#patientExerciseData = models.Movement(patientExerciseData)
+
 	return render_to_response('dashboard.html', {"exercises": exercises})
 
