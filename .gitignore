@@ -1,2 +1,5 @@
 *.pyc
+/apt_server/*.pyc
+**/*.pyc
 db.sqlite3
+.DS_Store
