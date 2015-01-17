@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Listify</title>
+</head>
+<body>
+	{% for exercise in exercises %}
+    	{# Each "contact" is a Contact model object. #}
+    	{{ contact.full_name|upper }}<br />
+	{% endfor %}
+
+<div class="pagination">
+    <span class="step-links">
+        {% if exercises.has_previous %}
+            <a href="?page={{ contacts.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ exercises.number }} of {{ exercises.paginator.num_pages }}.
+        </span>
+
+        {% if exercises.has_next %}
+            <a href="?page={{ exercises.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+</body>
+</html>

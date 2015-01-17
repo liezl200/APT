@@ -12,3 +12,4 @@ class Movement(models.Model):
 	# method for accessing name of exercies 
 	def __unicode__(self):
 		return self.name
+
