@@ -7,6 +7,6 @@ from exercise.models import Movement
 
 
 
-
+admin.site.unregister(Movement)
 admin.site.register(Movement)
-admin.site.register(DateTime)
+#admin.site.register(DateTime)

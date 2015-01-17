@@ -13,6 +13,7 @@ class Movement(models.Model):
 	pose = models.CharField(max_length = 250)
 	orientation = models.CommaSeparatedIntegerField(max_length = 200)
 
+
 	# method for accessing name of exercies
 	def __unicode__(self):
 		return self.name
