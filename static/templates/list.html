@@ -15,6 +15,10 @@
         <h1>
             {% for exercise in exercises %}
                 {{exercise}}
+                <form action="submitExercise">
+                    <input type="text" class="form-control" name="patientExerciseDataInput"></label>
+                    <br><button type="submit" class="btn btn-default">Go!</button>
+                </form>
             {% endfor %}
         </h1>
         {% if exercises.has_next %}
