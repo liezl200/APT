@@ -1,2 +1,0 @@
-# APT
-Automatic Physical Therapy
