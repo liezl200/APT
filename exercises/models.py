@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-# SetPoses consist of the exercises a physical therapist
+# Movement consist of the exercises a physical therapist
 # creates for a patient
 # they are stored by pose and orientation and are named by name
 class Movement(models.Model):
