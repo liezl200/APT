@@ -5,8 +5,8 @@ from django.contrib import admin
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'exercises.views.home', name='home'),
-    url(r'^dashboard/', 'exercises.views.dailyExercises', name = 'dashboard'),
+    url(r'^$', 'exercise.views.home', name='home'),
+    url(r'^dashboard/', 'exercise.views.dailyExercises', name = 'dashboard'),
 
     url(r'^admin/', include(admin.site.urls)),
 )

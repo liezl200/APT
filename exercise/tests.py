@@ -1,5 +1,5 @@
 from django.test import TestCase
-from exercises.models import Movement
+from exercise.models import Movement
 
 # Create your tests here.
 
@@ -14,3 +14,4 @@ class MovementTests(TestCase):
 		self.assertEquals(
 			str(pose1),
 			"Grasp")
+

@@ -26,4 +26,4 @@ def dailyExercises(request):
 	#patientExerciseData = models.Movement(patientExerciseData)
 
 	return render_to_response('dashboard.html', {"exercises": exercises})
-
+	
