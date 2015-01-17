@@ -1,7 +1,11 @@
+from __future__ import unicode_literals
 from django.db import models
+from django.contrib.auth.models import User, Group
+from django.template.defaultfilters import slugify
+from django.core.urlresolvers import reverse
+from django.utils.encoding import python_2_unicode_compatible
 
-# Create your models here.
-# SetPoses consist of the exercises a physical therapist
+# Movement consist of the exercises a physical therapist
 # creates for a patient
 # they are stored by pose and orientation and are named by name
 class Movement(models.Model):
@@ -12,3 +16,9 @@ class Movement(models.Model):
 	# method for accessing name of exercies 
 	def __unicode__(self):
 		return self.name
+
+
+
+
+
+

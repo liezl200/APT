@@ -9,6 +9,8 @@ urlpatterns = patterns('',
     url(r'^dashboard/', 'exercise.views.dailyExercises', name = 'dashboard'),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^login/$', 'django.contrib.auth.views.login'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout')
 )
 
 if settings.DEBUG:
