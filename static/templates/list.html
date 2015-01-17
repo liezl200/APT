@@ -11,16 +11,21 @@
 
 <div class="pagination">
     <span class="step-links">
-        {% if exercises.has_previous %}
-            <a href="?page={{ contacts.previous_page_number }}">previous</a>
+        {% if exercises.has_next %}
+            <h1>
+                {% for exercise in exercises %}
+                    {{exercise}}
+                {% endfor %}
+            </h1>
+            <a href="?page={{ exercises.next_page_number }}">next</a>
         {% endif %}
 
         <span class="current">
             Page {{ exercises.number }} of {{ exercises.paginator.num_pages }}.
         </span>
 
-        {% if exercises.has_next %}
-            <a href="?page={{ exercises.next_page_number }}">next</a>
+        {% if exercises.has_previous %}
+            <a href="?page={{ exercises.previous_page_number }}">previous</a>
         {% endif %}
     </span>
 </div>
