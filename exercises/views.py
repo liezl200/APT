@@ -4,18 +4,14 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 def home(request):
 
-	return render_to_response("hello.html", 
+	return render_to_response("home.html", 
 		locals(), 
 		context_instance=RequestContext(request))
-
-# go through daily exercises
-
 
 def dailyExercises(request):
 	exercise_list = ['E1', 'E2', 'E3', 'E4', 'E5']
 	#put one element of data onto each page
 	paginator = Paginator(exercise_list, 1)
-
 	page = request.GET.get('page')
 
 	try:
