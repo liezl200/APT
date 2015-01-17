@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Listify</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 <body>
 	{% for exercise in exercises %}
@@ -11,13 +12,13 @@
 
 <div class="pagination">
     <span class="step-links">
+        <h1>
+            {% for exercise in exercises %}
+                {{exercise}}
+            {% endfor %}
+        </h1>
         {% if exercises.has_next %}
-            <h1>
-                {% for exercise in exercises %}
-                    {{exercise}}
-                {% endfor %}
-            </h1>
-            <a href="?page={{ exercises.next_page_number }}">next</a>
+            <a href="?page={{ exercises.next_page_number }}">Next</a>
         {% endif %}
 
         <span class="current">
@@ -25,7 +26,7 @@
         </span>
 
         {% if exercises.has_previous %}
-            <a href="?page={{ exercises.previous_page_number }}">previous</a>
+            <a href="?page={{ exercises.previous_page_number }}">Previous</a>
         {% endif %}
     </span>
 </div>

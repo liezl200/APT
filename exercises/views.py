@@ -12,7 +12,7 @@ def home(request):
 
 
 def dailyExercises(request):
-	exercise_list = ['e1', 'e2', 'e3']
+	exercise_list = ['Exercise 1', 'Exercise 2', 'Exercise 3']
 	#put one element of data onto each page
 	paginator = Paginator(exercise_list, 1)
 
