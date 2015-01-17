@@ -1,8 +1,9 @@
 from django.shortcuts import render, render_to_response, RequestContext
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-# Create your views here.
 
+# Create your views here.
 def home(request):
+
 	return render_to_response("home.html", 
 		locals(), 
 		context_instance=RequestContext(request))
@@ -22,7 +23,7 @@ def dailyExercises(request):
 		#if page is out of range (e.g. 9999), deliver last page of results.
 		exercises = paginator.page(paginator.num_pages)
 
-	patientExerciseData = Movement(patientExerciseData)
+	#patientExerciseData = models.Movement(patientExerciseData)
 
 	return render_to_response('dashboard.html', {"exercises": exercises})
 	
